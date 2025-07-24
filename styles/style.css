@@ -26,7 +26,7 @@ form {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  height: 100px;
+  height: 115px;
   position: relative;
 }
 form fieldset {
@@ -47,6 +47,7 @@ form input {
   border: 1px solid hsla(0, 0%, 0%, 0.1);
   font-size: 1.5em;
   font-weight: bold;
+  cursor: pointer;
 }
 form input:focus {
   outline: 1px solid hsl(259, 100%, 65%);
@@ -58,12 +59,16 @@ form button {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: black;
+  background-color: hsl(259, 100%, 65%);
   border: none;
   position: absolute;
   bottom: -30px;
   right: -10px;
   cursor: pointer;
+  transition: all 0.15s ease;
+}
+form button:hover {
+  background-color: hsl(0, 0%, 0%);
 }
 
 .input-group {
@@ -85,6 +90,21 @@ form button {
   font-weight: bold;
 }
 
+.error {
+  color: hsl(0, 100%, 67%);
+  font-size: 0.7em;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.label-error {
+  color: hsl(0, 100%, 67%);
+}
+
+.input-error {
+  border: 1px solid hsl(0, 100%, 67%);
+}
+
 @media screen and (max-width: 768px) {
   .calc {
     width: 70% !important;
@@ -101,7 +121,7 @@ form button {
     height: 60px;
   }
   .result-group {
-    font-size: 1.5em;
+    font-size: 1.6em;
   }
 }
 @media screen and (320px <= width <= 425px) {

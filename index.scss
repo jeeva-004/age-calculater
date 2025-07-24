@@ -27,7 +27,7 @@ form {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    height: 100px;
+    height: 115px;
     position: relative;
 
     fieldset {
@@ -50,7 +50,7 @@ form {
         border: 1px solid hsla(0, 0%, 0%, .1);
         font-size: 1.5em;
         font-weight: bold;
-
+        cursor: pointer;
         &:focus {
             outline: 1px solid hsl(259, 100%, 65%);
         }
@@ -65,12 +65,16 @@ form {
         width: 80px;
         height: 80px;
         border-radius: 50%;
-        background-color: black;
+        background-color: hsl(259, 100%, 65%);
         border: none;
         position: absolute;
         bottom: -30px;
         right: -10px;
         cursor: pointer;
+        transition: all .15s ease;
+        &:hover{
+            background-color: hsl(0, 0%, 0%);
+        }
     }
 }
 
@@ -92,6 +96,21 @@ form {
         margin-right: 5px;
         font-weight: bold;
     }
+}
+
+.error{
+    color: hsl(0, 100%, 67%);
+    font-size: .7em;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.label-error{
+    color:hsl(0, 100%, 67%);
+}
+
+.input-error{
+    border: 1px solid hsl(0, 100%, 67%);
 }
 
 @media screen and (max-width:768px) {
@@ -116,7 +135,7 @@ form {
     }
 
     .result-group {
-        font-size: 1.5em;
+        font-size: 1.6em;
     }
 }
 

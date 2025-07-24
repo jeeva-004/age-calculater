@@ -52,10 +52,17 @@ form input {
 form input:focus {
   outline: 1px solid hsl(259, 100%, 65%);
 }
-form :nth-child(4) {
-  align-self: end;
+
+.input-group {
+  box-shadow: 0 2px 0 hsla(0, 0%, 0%, 0.1);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  position: relative;
 }
-form button {
+
+button {
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -67,20 +74,13 @@ form button {
   cursor: pointer;
   transition: all 0.15s ease;
 }
-form button:hover {
+button:hover {
   background-color: hsl(0, 0%, 0%);
 }
 
-.input-group {
-  box-shadow: 0 2px 0 hsla(0, 0%, 0%, 0.1);
-  border-radius: 10px;
-  margin-bottom: 20px;
-  display: flex;
-  gap: 10px;
-}
-
 .result-group {
-  font-size: 2.5em;
+  font-size: 2em;
+  letter-spacing: 0.01em;
   font-style: italic;
   font-weight: bolder;
 }
@@ -121,7 +121,7 @@ form button:hover {
     height: 60px;
   }
   .result-group {
-    font-size: 1.6em;
+    font-size: 1.4em;
   }
 }
 @media screen and (320px <= width <= 425px) {
@@ -136,14 +136,14 @@ form button:hover {
     width: 90%;
   }
   form button {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
   }
   form button img {
     width: 60%;
   }
   .result-group {
-    font-size: 1.4em;
+    font-size: 1em;
   }
 }
 

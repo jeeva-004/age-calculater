@@ -56,10 +56,17 @@ form {
         }
     }
 
+}
 
-    :nth-child(4) {
-        align-self: end;
-    }
+.input-group {
+    box-shadow: 0 2px 0 hsla(0, 0%, 0%, .1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    position: relative;
+}
+
 
     button {
         width: 80px;
@@ -76,18 +83,11 @@ form {
             background-color: hsl(0, 0%, 0%);
         }
     }
-}
 
-.input-group {
-    box-shadow: 0 2px 0 hsla(0, 0%, 0%, .1);
-    border-radius: 10px;
-    margin-bottom: 20px;
-    display: flex;
-    gap: 10px;
-}
 
 .result-group {
-    font-size: 2.5em;
+    font-size: 2em;
+    letter-spacing: .01em;
     font-style: italic;
     font-weight: bolder;
 
@@ -135,7 +135,7 @@ form {
     }
 
     .result-group {
-        font-size: 1.6em;
+        font-size: 1.4em;
     }
 }
 
@@ -155,8 +155,8 @@ form {
         }
 
         button {
-            width: 50px;
-            height: 50px;
+            width: 30px;
+            height: 30px;
 
             img {
                 width: 60%;
@@ -165,6 +165,6 @@ form {
     }
 
     .result-group {
-        font-size: 1.4em;
+        font-size: 1em;
     }
 }

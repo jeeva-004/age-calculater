@@ -24,7 +24,7 @@ function validate_Inputs() {
         setError(day,'This field is required');
         result = false;
     }
-    else if(day.value>31||day.value==0){
+    else if(day.value>31||day.value<=0){
         setError(day, 'Must be a valid day');
         result = false;
     }
@@ -37,7 +37,7 @@ function validate_Inputs() {
         setError(month, 'This field is required');
         result = false;
     }
-    else if(month.value>12||month==0){
+    else if(month.value>12||month<=0){
         setError(month, 'Must be a valid month');
         result = false;
     }
@@ -49,8 +49,12 @@ function validate_Inputs() {
         setError(year, 'This field is required');
         result = false;
     }
-    else if(year.value>current_Year||year==0){
+    else if(year.value<=0){
         setError(year, 'Must be a valid year');
+        result = false;
+    }
+    else if(year.value>current_Year){
+        setError(year, 'Must be a past year');
         result = false;
     }
     else{

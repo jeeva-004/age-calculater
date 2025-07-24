@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(259, 100%, 65%, .12);
+    font-family: "Bai Jamjuree", sans-serif;
+
+    .calc {
+        width: 57%;
+        background-color: hsl(0, 100%, 100%);
+        border-radius: 10px;
+        box-shadow: 0 0 10px hsl(0, 0%, 86%);
+        padding: 30px;
+    }
+}
+
+form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    position: relative;
+
+    fieldset {
+        border: none;
+    }
+
+    label {
+        text-transform: uppercase;
+        display: block;
+        font-size: .8em;
+        letter-spacing: .2em;
+        color: hsl(0, 0%, 0%);
+    }
+
+    input {
+        margin-top: 6px;
+        padding: 10px;
+        width: 50%;
+        border-radius: 8px;
+        border: 1px solid hsla(0, 0%, 0%, .1);
+        font-size: 1.5em;
+        font-weight: bold;
+
+        &:focus {
+            outline: 1px solid hsl(259, 100%, 65%);
+        }
+    }
+
+
+    :nth-child(4) {
+        align-self: end;
+    }
+
+    button {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: black;
+        border: none;
+        position: absolute;
+        bottom: -30px;
+        right: -10px;
+        cursor: pointer;
+    }
+}
+
+.input-group {
+    box-shadow: 0 2px 0 hsla(0, 0%, 0%, .1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.result-group {
+    font-size: 2.5em;
+    font-style: italic;
+    font-weight: bolder;
+
+    span {
+        color: hsl(259, 100%, 65%);
+        margin-right: 5px;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .calc {
+        width: 70% !important;
+    }
+
+    form {
+        label {
+            font-size: .6em;
+        }
+
+        input {
+            font-size: 1.1em;
+            width: 60%;
+        }
+
+        button {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    .result-group {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (320px<=width<=425px) {
+    .calc {
+        width: 90% !important;
+    }
+
+    form {
+        label {
+            font-size: .5em;
+        }
+
+        input {
+            font-size: .8em;
+            width: 90%;
+        }
+
+        button {
+            width: 50px;
+            height: 50px;
+
+            img {
+                width: 60%;
+            }
+        }
+    }
+
+    .result-group {
+        font-size: 1.4em;
+    }
+}

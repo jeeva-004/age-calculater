@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(259, 100%, 65%, 0.12);
+  font-family: "Bai Jamjuree", sans-serif;
+}
+body .calc {
+  width: 57%;
+  background-color: hsl(0, 100%, 100%);
+  border-radius: 10px;
+  box-shadow: 0 0 10px hsl(0, 0%, 86%);
+  padding: 30px;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  position: relative;
+}
+form fieldset {
+  border: none;
+}
+form label {
+  text-transform: uppercase;
+  display: block;
+  font-size: 0.8em;
+  letter-spacing: 0.2em;
+  color: hsl(0, 0%, 0%);
+}
+form input {
+  margin-top: 6px;
+  padding: 10px;
+  width: 50%;
+  border-radius: 8px;
+  border: 1px solid hsla(0, 0%, 0%, 0.1);
+  font-size: 1.5em;
+  font-weight: bold;
+}
+form input:focus {
+  outline: 1px solid hsl(259, 100%, 65%);
+}
+form :nth-child(4) {
+  align-self: end;
+}
+form button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: black;
+  border: none;
+  position: absolute;
+  bottom: -30px;
+  right: -10px;
+  cursor: pointer;
+}
+
+.input-group {
+  box-shadow: 0 2px 0 hsla(0, 0%, 0%, 0.1);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.result-group {
+  font-size: 2.5em;
+  font-style: italic;
+  font-weight: bolder;
+}
+.result-group span {
+  color: hsl(259, 100%, 65%);
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .calc {
+    width: 70% !important;
+  }
+  form label {
+    font-size: 0.6em;
+  }
+  form input {
+    font-size: 1.1em;
+    width: 60%;
+  }
+  form button {
+    width: 60px;
+    height: 60px;
+  }
+  .result-group {
+    font-size: 1.5em;
+  }
+}
+@media screen and (320px <= width <= 425px) {
+  .calc {
+    width: 90% !important;
+  }
+  form label {
+    font-size: 0.5em;
+  }
+  form input {
+    font-size: 0.8em;
+    width: 90%;
+  }
+  form button {
+    width: 50px;
+    height: 50px;
+  }
+  form button img {
+    width: 60%;
+  }
+  .result-group {
+    font-size: 1.4em;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
